@@ -10,7 +10,16 @@
 
 # Body
 def store_to_dict():
-    pass
+    open_txt = open('words.txt')
+    new_dict = {}
+    n = 1
+    for each_line in open_txt:
+        # When I create an empty dictionary within this for loop instead,
+        # each word replaces the word that was appeneded before.
+        # Would you mind explaning why that is?
+        new_dict[each_line.strip()] = n
+        n += 1
+    return new_dict
 
 
 ###############################################################################
